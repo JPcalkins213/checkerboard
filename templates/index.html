@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- j is how many rows there are  -->
+    {%for y in range(rows)%}
+    <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap;">
+        {% for x in range(cols) %}
+        {% if (x + y) % 2 == 0 %}
+        <div style="background-color: {{color2}}; height: 50px; width:50px; border:1px solid black;"></div>
+        {%else%}
+        <div style="background-color:{{color1}}; height: 50px; width:50px; border:1px solid black;"></div>
+        {%endif%}
+        {% endfor %}
+    </div>
+    {% endfor %}
+</body>
+
+</html>
